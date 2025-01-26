@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complain Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Include jQuery from a CDN -->
+  </head>
+  <body>
+    <!-- multistep form -->
+    <form id="msform">
+      <!-- progressbar -->
+      <ul id="progressbar">
+        <li class="active">Personal details</li>
+        <li>OTP Page</li>
+        <li>Complaint Details</li>
+      </ul>
+      <!-- fieldsets -->
+      <fieldset>
+        <h2 class="fs-title">Personal Details</h2>
+        <h3 class="fs-subtitle">Provide your personal information</h3>
+        <input type="text" name="username" placeholder="Username" />
+        <input type="text" name="email" placeholder="Email" />
+        <input type="text" name="phone" placeholder="Phone" />
+        <textarea name="address" placeholder="Address"></textarea>
+        <input type="password" name="pass" placeholder="Password" />
+        <input type="password" name="cpass" placeholder="Confirm Password" />
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset>
+      <fieldset>
+        <h2 class="fs-title">OTP</h2>
+        <h3 class="fs-subtitle">Enter the OTP sent to your mobile</h3>
+        <div class="otp-container">
+          <input type="number" class="otp-input" maxlength="1" />
+          <input type="number" class="otp-input" maxlength="1" />
+          <input type="number" class="otp-input" maxlength="1" />
+          <input type="number" class="otp-input" maxlength="1" />
+          <input type="number" class="otp-input" maxlength="1" />
+          <input type="number" class="otp-input" maxlength="1" />
+        </div>
+        <!-- <input
+          type="button"
+          name="previous"
+          class="previous action-button"
+          value="Previous"
+        /> -->
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Verify"
+        />
+      </fieldset>
+
+      <fieldset>
+        <h2 class="fs-title">Complain Details</h2>
+
+        <!-- Image Upload -->
+        <label for="image-upload">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M12 16l4-4H8l4 4zm0-14C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-5 10l5-5 5 5H7z"
+            />
+          </svg>
+          Upload Image
+          <input type="file" id="image-upload" name="image" accept="image/*" />
+        </label>
+
+        <!-- Video Upload -->
+        <label for="video-upload">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M23 7l-7 5 7 5V7zM3 5h14a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2z"
+            />
+          </svg>
+          Upload Video
+          <input type="file" id="video-upload" name="video" accept="video/*" />
+        </label>
+
+        <!-- Record Voice -->
+        <div class="audio-record-container">
+          <button id="record-audio" class="audio-button" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 1a4 4 0 014 4v6a4 4 0 11-8 0V5a4 4 0 014-4zm-1 18.93V20a1 1 0 012 0v-.07a8.012 8.012 0 006.339-7.925h-2.025a6.006 6.006 0 01-12 0H4.661a8.012 8.012 0 006.339 7.925z"
+              />
+            </svg>
+            Record Voice
+          </button>
+
+          <!-- Visual indicator for recording -->
+          <div id="recording-indicator" class="recording-indicator"></div>
+
+          <audio id="audio-playback" controls hidden></audio>
+        </div>
+
+        <!-- Brief Description -->
+        <textarea
+          name="brief-description"
+          placeholder="Brief description"
+        ></textarea>
+
+        <!-- Buttons -->
+        <input
+          type="button"
+          name="Submit"
+          class="submit action-button"
+          value="submit"
+        />
+      </fieldset>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery UI for custom easing -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

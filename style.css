@@ -1,0 +1,276 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+
+  background: black;
+}
+
+body {
+  font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+#msform {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#msform fieldset {
+  background: rgba(20, 40, 40, 0.8);
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input,
+#msform textarea {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, 0.2);
+  color: white;
+  outline: none;
+}
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(10, 180, 180, 1);
+  font-weight: bold;
+  color: white;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+#msform .action-button:hover,
+#msform .action-button:focus {
+  background: rgba(20, 20, 20, 0.8);
+  box-shadow: 0 0 0 2px rgb(109, 109, 109), 0 0 0 3px rgba(10, 180, 180, 1);
+}
+.otp-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -webkit-appearance: none; /* For Chrome, Safari, and Edge */
+  -moz-appearance: textfield; /* For Firefox */
+}
+#msform .otp-input {
+  width: 10px;
+  height: 10px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-radius: 5px;
+  background: rgba(20, 20, 20, 0.2);
+  color: white;
+  outline: none;
+}
+
+.otp-input:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 5px rgba(10, 180, 180, 1);
+}
+#msform label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-radius: 5px;
+  background: rgba(20, 20, 20, 0.2);
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+#msform label:hover {
+  background: rgba(10, 180, 180, 0.2);
+}
+
+#msform label svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  margin-right: 10px;
+}
+
+#msform input[type="file"] {
+  display: none;
+}
+
+#msform textarea {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, 0.2);
+  color: white;
+  outline: none;
+}
+
+.audio-record-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+  border: 1px solid rgba(10, 180, 180, 1);
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative; /* To position the indicator inside */
+}
+
+.audio-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none; /* No background */
+  color: white;
+  cursor: pointer;
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  font: inherit; /* Inherit font styling */
+}
+
+.audio-button svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  margin-right: 10px;
+}
+
+.audio-button:hover {
+  background: none; /* No hover background */
+  color: rgba(10, 180, 180, 1); /* Change text color on hover */
+}
+
+.recording-indicator {
+  width: 60px;
+  height: 5px;
+  background-color: rgba(10, 180, 180, 1);
+  margin-top: 15px;
+  border-radius: 5px;
+  animation: pulse 0.5s infinite alternate;
+  display: none; /* Hide the indicator initially */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+audio {
+  margin-top: 10px;
+  width: 100%; /* Ensure audio control fits the container */
+  height: 30px; /* Set the height of the audio control */
+  border-radius: 5px; /* Optional: rounded corners for audio control */
+}
+
+/*headings*/
+.fs-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.705);
+  margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  content: none;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #27ae60;
+  color: white;
+}
